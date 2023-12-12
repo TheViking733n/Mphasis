@@ -6,12 +6,63 @@
     <title>Mphasis | Dashboard</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <!-- <link href="https://res.cloudinary.com/finnhvman/raw/upload/matter/matter-0.2.2.css" rel="stylesheet"> -->
+    <link href="https://res.cloudinary.com/finnhvman/raw/upload/matter/matter-0.2.2.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="left-pane">
-
+        <div class="left-header">
+            <img src="/static/images/mphasis.svg" alt="Mphasis Logo">
+        </div>
+        <div class="user-info-box">
+            <div class="user-info">
+                <img src="/static/images/user.svg" alt="User Image">
+                <div class="user-name">
+                    <p>Rescheduling Agent</p>
+                </div>
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="tab">
+                <span>Dashboard</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" version="1.2" id="home"><path d="M12 3s-6.186 5.34-9.643 8.232A1.041 1.041 0 0 0 2 12a1 1 0 0 0 1 1h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 .98.98 0 0 0-.383-.768C18.184 8.34 12 3 12 3z"></path></svg>
+            </div>
+            <div class="tab">
+                <span>Input Dataset</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" id="table"><path d="M31.966 3.896C31.878 2.866 31.046 2 30 2H2C.954 2 .122 2.866.034 3.896H0V30a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V3.896h-.034zM12 14V8h8v6h-8zm8 2v6.166h-8V16h8zM10 8v6H2V8h8zm-8 8h8v6.166H2V16zm0 14v-6h8v6H2zm10 0v-6h8v6h-8zm18 0h-8v-6h8v6zm0-7.834h-8V16h8v6.166zM30 14h-8V8h8v6z"></path></svg>
+            </div>
+            <div class="tab">
+                <span>Rules</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="settings"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path></svg>
+            </div>
+            <div class="tab">
+                <span>Exceptions</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" enable-background="new 0 0 32 32" viewBox="0 0 32 32" id="danger"><path d="M1.04999,29.75c0.67999,1.08997,1.85999,1.75,3.15002,1.75h23.59998c1.29004,0,2.47003-0.66003,3.15002-1.75c0.66998-1.10004,0.72998-2.45001,0.15997-3.60004l-11.81-23.60999C18.66998,1.28998,17.40997,0.5,16,0.5s-2.66998,0.78998-3.29999,2.03998l-11.81,23.60999C0.32001,27.31,0.38,28.64996,1.04999,29.75z M17.5,10.45996v9.53003c0,0.83002-0.66998,1.5-1.5,1.5s-1.5-0.66998-1.5-1.5v-9.53003c0-0.82996,0.66998-1.5,1.5-1.5S17.5,9.63,17.5,10.45996z M14.5,25.45996V24.37c0-0.83002,0.66998-1.5,1.5-1.5s1.5,0.66998,1.5,1.5v1.08997c0,0.82001-0.66998,1.5-1.5,1.5S14.5,26.27997,14.5,25.45996z"></path></svg>
+            </div>
+        </div>
+        <div class="docs-btn-container">
+            <a href="https://www.youtube.com" class="matter-button-contained">
+                Read Docs
+            </a>
+        </div>
     </div>
+
     <div class="right-pane">
+        <div class="right-header">
+            <div class="heading">
+                <h1>Flights Rescheduling Control Panel</h1>
+            </div>
+            <div class="user-info">
+                <img src="/static/images/user.svg" alt="User Image">
+            </div>
+        </div>
+        <div class="content-box">
+            <div class="content-header">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="content">
+            </div>
+        </div>
         
     </div>
 </body>

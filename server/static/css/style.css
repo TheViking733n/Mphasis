@@ -221,23 +221,24 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .google-sheet-link-container-span {
     font-size: 1.2rem;
     font-weight: bold;
     color: #626262;
-    width: 30%;
+    width: 20%;
 }
 
 .matter-textfield-filled {
-    width: 50%;
+    width: 80%;
 }
 
 .submit-bnt-container {
     width: 100%;
     padding: 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;

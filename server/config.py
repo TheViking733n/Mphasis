@@ -12,3 +12,8 @@ PASSENGER_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1SB4k3Rf3dzIskoJfL
 RESCHEUDLE_SHEET_URL = ''
 
 
+#Rules for ranking    
+PNR_RANKING = {
+    'score' : [ 200, 1750, 1750, 1750, 750, 750, 750, 100, 200, 500, 50, 1750 ],
+    'enabled' : [ True, True, True, True, True, True, True, True, True, True, True, True ],
+}

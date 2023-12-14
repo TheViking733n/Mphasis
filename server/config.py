@@ -14,6 +14,6 @@ RESCHEUDLE_SHEET_URL = ''
 
 #Rules for ranking    
 PNR_RANKING = {
-    'score' : [ 200, 1750, 1750, 1750, 750, 750, 750, 100, 200, 500, 50, 1750 ],
+    'score' : [ 200, 2000, 1750, 1500, 1000, 750, 500, 100, 200, 500, 50, [2000, 1800, 1600, 1500]],
     'enabled' : [ True, True, True, True, True, True, True, True, True, True, True, True ],
 }

@@ -1,6 +1,47 @@
-
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+}
 
 $(document).ready(function(){
+    $("#import-dataset-btn").click(function(){
+        var formData = new FormData();
+        for (let i = 1; i <= 4; i++) {
+            formData.append("file-" + i, document.querySelector("#actual-upload-" + i).files[0]);
+            formData.append("sheet-" + i, document.querySelector("#dataset-sheet-url-" + i).value);
+        }
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/submit-dataset", true);
+        xhr.onload = function() {
+            if (xhr.status == 200) {
+                let response = JSON.parse(this.responseText);
+                console.log(response);
+                let status = response["status"];
+                let title = response["title"];
+                let message = response["message"];
+                toastr[status](message, title);
+            } else {
+                console.log("Error");
+                toastr["error"]("Unable to Submit data", "Error");
+            }
+        }
+        xhr.send(formData);
+    });
+
+
     $("#dashboard").click(function(){
     $("#dashboard-content").show();
     $("#inputdataset-content").hide();

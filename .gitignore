@@ -1,1 +1,5 @@
 .ipynb_checkpoints
+/server/__pycache__/*
+*.py[cod]
+/server/*.py[cod]
+/server/*/*.py[cod]

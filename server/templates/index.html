@@ -12,7 +12,14 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-scroll/1.3.3/slimscroll.min.js" integrity="sha512-apfzLl6CTt6dEWKi+ffH8OGaTuw75cGdH1EoFW5zqBMCoWB8Z+lmt4eWPvidyemTAf9wwl9N6reKnhCtjJvN/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-  
+  <script>
+    var pnr_ranking_score = {{ pnr_ranking_score }};
+    var pnr_ranking_enabled = {{ pnr_ranking_enabled }};
+    // update last element of pnr_ranking_score from list to comma separated string
+    pnr_ranking_score[pnr_ranking_score.length - 1] = pnr_ranking_score[pnr_ranking_score.length - 1].join(',');
+    console.log(pnr_ranking_score);
+    console.log(pnr_ranking_enabled);
+  </script>
 </head>
 <body>
   <div class="left-pane">
@@ -157,7 +164,56 @@
           <h1>Rules</h1>
         </div>
         <div class="content">
-          <p>Rules Content</p>
+          <div class="item-container">
+            <div class="rules-table-header">
+              <h2>PNR Ranking Rules</h2>
+            </div>
+            <div id="pnr-ranking-table" class="rules-table">
+              <div class="table-row row-heading">
+                <div class="table-col table-col-1">
+                  <span>#</span>
+                </div>
+                <div class="table-col table-col-2">
+                  <span>Name</span>
+                </div>
+                <div class="table-col table-col-3">
+                  <span>Condition</span>
+                </div>
+                <div class="table-col table-col-4">
+                  <span>Score Value</span>
+                </div>
+                <div class="table-col table-col-5">
+                  <span>Enabled</span>
+                </div>
+              </div>
+              <!-- <div class="table-row">
+                <div class="table-col table-col-1">
+                  <span>01</span>
+                </div>
+                <div class="table-col table-col-2">
+                  <span>SSR</span>
+                </div>
+                <div class="table-col table-col-3">
+                  <span>PNR.SSR = SSR</span>
+                </div>
+                <div class="table-col table-col-4">
+                  <span>200</span>
+                </div>
+                <div class="table-col table-col-5">
+                  <label class="matter-checkbox">
+                    <input type="checkbox" checked>
+                    <span></span>
+                  </label>
+                </div>
+              </div> -->
+            </div>
+
+          </div>
+          <div class="submit-bnt-container">
+            <section>
+              <button id="import-rules-btn" class="ladda-button blue contract"><span class="label">Update&nbsp;Rules</span> <span class="spinner"></span></button>
+            </section>
+          </div>
         </div>
       </div>
       <div id="exceptions-content" hidden>

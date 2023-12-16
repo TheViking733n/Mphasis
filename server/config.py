@@ -3,6 +3,9 @@ This file contains default values for various configuration options.
 
 '''
 
+# Flask app configuration
+UPLOAD_FOLDER = 'uploads'
+
 
 # Input dataset google sheet urls
 INVENTORY_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1abfWjKouFxD_erzhdnam8tCtFC5G_956/edit#gid=2096778584'
